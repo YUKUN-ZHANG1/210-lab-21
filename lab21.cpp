@@ -32,7 +32,7 @@ class Goat {
 
         // Print
         void print() const {
-            std::cout << "Goat [Age: " << age << ", Name: " << name << ", Color: " << color << "]" << std::endl;
+            cout << name << " (" << color << ", " << age << ")" << endl;
         }
 
 
@@ -145,8 +145,13 @@ public:
 
     void print() {
         Node* current = head;
-        if (!current) return;
+        if (!current){
+            cout << "List is empty" << endl;
+            return;
+        }
+        cout << endl;
         while (current) {
+            cout << "   ";
             current->data.print();
             current = current->next;
         }
@@ -155,8 +160,13 @@ public:
 
     void print_reverse() {
         Node* current = tail;
-        if (!current) return;
+        if (!current){
+            cout << "List is empty" << endl;
+            return;
+        }
+        cout << endl;
         while (current) {
+            cout << "   ";
             current->data.print();
             current = current->prev;
         }
