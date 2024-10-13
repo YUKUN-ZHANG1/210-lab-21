@@ -1,3 +1,6 @@
+// COMSC-210 | Lab 21: Goat Herd Manager | Yukun Zhang
+// IDE used: Visual Studio Code
+
 #include <iostream>
 using namespace std;
 
