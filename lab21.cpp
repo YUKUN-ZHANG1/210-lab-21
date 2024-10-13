@@ -3,6 +3,44 @@ using namespace std;
 
 const int MIN_NR = 10, MAX_NR = 99, MIN_LS = 5, MAX_LS = 20;
 
+class Goat {
+    private:
+        int age;
+        string name; 
+        string color;
+        static const std::string names[15];
+        static const std::string colors[15];
+    public:
+        // Default constructor - assigns random age, name, and color
+        Goat() {
+            age = rand() % 20 + 1;  // Random age between 1 and 20
+            name = names[rand() % 15];  // Random name from names[]
+            color = colors[rand() % 15];  // Random color from colors[]
+        }
+
+        // Parameterized constructor
+        Goat(int a, std::string n, std::string c) : age(a), name(n), color(c) {}
+
+        // getters
+        int getAge() const { return age; }
+        string getName() const { return name; }
+        string getColor() const { return color; }
+        //setters
+        void setAge(int a) { age = a; }
+        void setName(const std::string& n) { name = n; }
+        void setColor(const std::string& c) { color = c; }
+
+        // Print
+        void print() const {
+            std::cout << "Goat [Age: " << age << ", Name: " << name << ", Color: " << color << "]" << std::endl;
+        }
+};
+
+const string Goat::names[15] = {"Billy", "Nanny", "Kiddo", "Daisy", "Snowflake", "Midnight", "Lucky", "Rocky", "Blossom", "Spot", "Luna", "Shadow", "Coco", "Buttercup", "Zeus"};
+const string Goat::colors[15] = {"White", "Black", "Brown", "Gray", "Golden", "Spotted", "Cream", "Tan", "Silver", "Blue", "Red", "Green", "Purple", "Orange", "Yellow"};
+
+
+
 class DoublyLinkedList {
 private:
     struct Node {
